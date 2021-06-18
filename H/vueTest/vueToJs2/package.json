@@ -1,0 +1,17 @@
+{
+  "name": "vuetojs2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-ui": "^2.15.2",
+    "sass": "^1.34.1",
+    "vue-generate-cli": "^1.2.0",
+    "wp-vuetojs": "^1.0.1"
+  }
+}

@@ -49,11 +49,13 @@ var ctrlFileAjax = {
 	},
 	readFile:function (url,id,backFun) {
 		var urls = "http://127.0.0.1:8080/NodeCtrl/nodeSelect";
+		var postType = "post"
 		if(url.indexOf("http")==0){
 			urls = url;
+			postType = "get"
 		}
 		$.ajax({
-    		type:"post",
+    		type:postType,
     		url:urls,
     		async:true,
     		contentType: "application/x-www-form-urlencoded",

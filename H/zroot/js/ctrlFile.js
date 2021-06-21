@@ -48,17 +48,24 @@ var ctrlFileAjax = {
     	});
 	},
 	readFile:function (url,id,backFun) {
+		var urls = "http://127.0.0.1:8080/NodeCtrl/nodeSelect";
+		if(url.indexOf("http")==0){
+			urls = url;
+		}
 		$.ajax({
     		type:"post",
-    		url:"http://127.0.0.1:8080/NodeCtrl/nodeSelect",
+    		url:urls,
     		async:true,
     		contentType: "application/x-www-form-urlencoded",
 			data:{"url":url,"id":id},
     		dataType:"json",
     		success:function (data) {
     			if(backFun){
-					backFun(data);
-				}
+						if(url.indexOf("http")==0){
+							data = [{node:data}]
+						}
+						backFun(data);
+					}
     			return data;
     		},
     		error:function (data) {

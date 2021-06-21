@@ -853,6 +853,7 @@ function createTab (num) {
 	return new Array(num+1).join('\t');
 }
 var mulu1 = basePeng.projectUrl;
+var mulu3 = basePeng.serviceprojectUrl;
 var mulu2 = "G:/"
 //搜索框后的事件
 var ctrlInfo = {
@@ -863,7 +864,7 @@ var ctrlInfo = {
 		$(xuanze).layout("expand",region);
 	},
 	selectInfo:function (funBack) {
-		ctrlFileAjax.readFile(mulu1+"/js/binitAllCtrl/jsonData/zInfoAll.ini","",function (data) {
+		ctrlFileAjax.readFile(mulu3+"/js/binitAllCtrl/jsonData/zInfoAll.ini","",function (data) {
 			var node = data[0].node;
 			var nodes = node.split("\n");
 			for(var i=0;i<nodes.length;i++){
